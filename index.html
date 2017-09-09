@@ -1,1 +1,60 @@
-<h1>Hello world</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MovieNet</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <link rel="stylesheet" type="text/css" href="moviecard.css" />
+    <link rel="stylesheet" type="text/css" href="loader.css" />
+</head>
+<body>  
+    <script type="text/javascript" src="app.js"></script>
+    <div id="gradient"></div>
+    <header>
+        <img src="assets/side-menu-icon.png" class="side-menu-icon">
+        <img src="assets/logo.png" href="#" alt="logo" onclick="reset();" class="logo">
+    </header>
+    <div class="homepage" id="homepage">
+        <div class="input-wrapper" id="input-wrapper">
+          <input type="text" id="imdbID" placeholder="Enter your imdb ID" onkeyup="EnterKeyPressed(event)" >
+          <img src="assets/right-arrow.png" id="go-button"
+               onclick="get_recommendations();">
+        </div>
+        <a class="note">
+            <h4>your imdb ratings should be public,</h4>
+            <h4>find how to make it public <a href="https://getsatisfaction.com/imdb/topics/i_cannot_make_my_ratings_public" style="color:white" target="_blank">here</a></h4>
+        </a>
+    </div>
+    <div class="movie-wrapper" id="movie-wrapper">
+            <div class="movie-background" id="movie-background"></div>
+            <div class="card">
+              <div class="card_left">
+                <img id="movie-poster" />
+              </div>
+              <div class="card_right">
+                <h1 id="movie-title"></h1>
+                <div class="card_right__details">
+                  <ul>
+                    <li id="movie-date"></li>
+                    <li id="movie-runtime"></li>
+                    <li id="movie-genre"></li>
+                  </ul>
+                  <div class="card_right__rating">
+                  </div>
+                  <div class="card_right__review">
+                    <p id="movie-overview"></p>
+                      <a href="http://www.imdb.com/title/tt0266697/plotsummary?ref_=tt_stry_pl" target="_blank" id="movie-readmore">Read more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="next-prev-wrapper">
+                <a href="#" class="next-prev-button" onclick="previous();">&#10094;</a>
+                <a href="#" class="next-prev-button" onclick="next();">&#10095;</a>
+            </div>
+    </div>
+    <div class="spinner" id="loader" style="visibility: hidden;">
+      <div class="double-bounce1"></div>
+      <div class="double-bounce2"></div>
+    </div>
+</body>
+</html>
