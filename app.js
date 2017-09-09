@@ -82,7 +82,6 @@ function cache(n){
         }
         movies_data.push(movie_data);
     }
-    console.log(movies_data.length," movies are cached")
     last_cached+=n;
 }
 
@@ -125,5 +124,4 @@ document.onkeydown = function (e) {
         if (e.keyCode == 39) next();
         if (e.keyCode == 37) previous();
     }
-    console.log(offset);
 };
