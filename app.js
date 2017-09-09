@@ -82,8 +82,8 @@ function cache(n){
             console.log("couldn't load background image");
         }
         movies_data.push(movie_data);
-        last_cached+=1;
     }
+    last_cached+=n;
 }
 
 function next(){
