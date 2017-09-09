@@ -62,6 +62,7 @@ function cache(n){
     ImageLargeBaseURL = "http://image.tmdb.org/t/p/w1000";
     for(i=0; i<n; i++){
         movie_data = get_movie_data(items[last_cached + i]);
+        if (movie_data==null) continue;
         //cache image
         movie_data["cache"] = [];
         if (movie_data["poster_path"]){
@@ -81,8 +82,8 @@ function cache(n){
             console.log("couldn't load background image");
         }
         movies_data.push(movie_data);
+        last_cached+=1;
     }
-    last_cached+=n;
 }
 
 function next(){
