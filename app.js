@@ -37,7 +37,7 @@ var items = [];
 function get_recommendations(){
     var imdbID = document.getElementById("imdbID").value;
     var client = new HttpClient();
-    var url = "/get_recommendations?user_imdb_id=" + imdbID;
+    var url = "http://zeyadyasser.pythonanywhere.com/get_recommendations?user_imdb_id=" + imdbID;
     hide("homepage");
     show("loader");
     client.get(url, function(response) {
