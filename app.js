@@ -88,8 +88,8 @@ function cache(n){
 
 function next(){
     if (last_cached == 0) cache(5);
-    else if (last_cached <= offset+5){
-            cache(5);
+    else if (last_cached <= offset+2){
+            cache(1);
         }
     rank = (offset + 1).toString() + ". ";
     movie_data = movies_data[offset];
