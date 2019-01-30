@@ -100,8 +100,8 @@ function next(){
     document.getElementById("movie-genre").innerHTML = movie_data["genres"][0]["name"];
     document.getElementById("movie-overview").innerHTML = movie_data["overview"].substring(0,280) + "...";
     document.getElementById("movie-readmore").href = "http://www.imdb.com/title/" + movie_data["imdb_id"] + "/plotsummary?ref_=tt_stry_pl" ;
-    movie_background_url ="http://image.tmdb.org/t/p/w1000" +  movie_data["backdrop_path"]; 
-    document.getElementById("movie-background").style.background="url(" + movie_background_url + "),rgba(100,0,100,1)";
+    //movie_background_url ="http://image.tmdb.org/t/p/w1000" +  movie_data["backdrop_path"]; 
+    //document.getElementById("movie-background").style.background="url(" + movie_background_url + "),rgba(100,0,100,1)";
     offset+=1;
 }
 
@@ -117,6 +117,7 @@ function reset(){
     show("homepage");
     offset = 0;
     items = [];
+    window.location.replace("https://zeyadyasser.github.io/MovieNet");
 }
 
 document.onkeydown = function (e) {
